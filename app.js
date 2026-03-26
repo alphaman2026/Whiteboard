@@ -17,6 +17,7 @@ document.getElementById("pen").onclick = () => erasing = false;
 document.getElementById("eraser").onclick = () => erasing = true;
 
 document.getElementById("clear").onclick = () => {
+  ctx.fillStyle = "white";
   ctx.clearRect(0,0,canvas.width,canvas.height);
 };
 
@@ -74,5 +75,11 @@ canvas.addEventListener("touchmove", e => {
   const touch = e.touches[0];
   draw(touch.clientX - rect.left, touch.clientY - rect.top);
 });
+
+// 초기 배경 흰색 채우기
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
 
 canvas.addEventListener("touchend", end);
