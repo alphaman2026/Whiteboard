@@ -18,7 +18,7 @@ document.getElementById("eraser").onclick = () => erasing = true;
 
 document.getElementById("clear").onclick = () => {
   ctx.fillStyle = "white";
-  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillRect(0,0,canvas.width,canvas.height);
 };
 
 document.getElementById("save").onclick = () => {
